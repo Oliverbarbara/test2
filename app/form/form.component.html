@@ -1,0 +1,43 @@
+<div class="container">
+<form #form="ngForm">
+    <h2>Register new User</h2>
+    <div class="row">
+    <div clas="col-25">
+     <p>
+        <label>First Name: </label>
+        <input type="text" name="firstName" id="firstName" [(ngModel)]="firstName" placeholder="Your name..">
+    </p>
+    
+   
+    <p>
+        <label>Last Name: </label>
+        <input type="text" name="lastName" id="lastName" [ngModel]="lastName" placeholder="Last Name..">
+    </p>
+  
+   
+    <p>
+        <label>Email: </label>
+        <input type="text" name="email" id="email" [ngModel]="email" placeholder="email@.com">
+    </p>
+   
+    <p>
+        <span matPrefix>+351 &nbsp;</span>
+        <input type="tel" matInput placeholder="000-000-000">    
+    </p>
+
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="buy">Buy</mat-button-toggle>
+        <mat-button-toggle value="sell">Sell</mat-button-toggle>
+        <mat-button-toggle value="others">Others</mat-button-toggle>
+      </mat-button-toggle-group>
+      
+    </div>
+
+    <div class="button">
+        <button mat-raised-button (click)="onSubmit(form)" >Submit</button>
+        <button mat-raised-button color="primary">Reset</button>
+
+    </div>
+</div>
+</form>
+</div>
